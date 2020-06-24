@@ -67,6 +67,26 @@ export const Repositories = styled.div`
   margin-top: 80px;
   max-width: 700px;
 
+  button {
+    width: 181px;
+    height: 30px;
+    background: #ff9369;
+    border-radius: 5px 5px 5px 5px;
+    border: 0;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+    svg {
+      margin-right: 10px;
+      color: #ff9369;
+    }
+  }
+
   a {
     background: #fff;
     border-radius: 5px;

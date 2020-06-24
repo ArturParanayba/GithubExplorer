@@ -1,4 +1,4 @@
-import React, { useState, FormEvent, useEffect } from 'react';
+import React, { useState, FormEvent, useEffect, useCallback } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
@@ -29,6 +29,10 @@ const Dashboard: React.FC = () => {
     }
     return [];
   });
+
+  function handleRemoveRepos(): void {
+    setRepositories([]);
+  }
 
   useEffect(() => {
     localStorage.setItem(
@@ -61,6 +65,7 @@ const Dashboard: React.FC = () => {
       );
     }
   }
+
   return (
     <>
       <img src={logoImg} alt="Github Explorer" />
@@ -78,10 +83,16 @@ const Dashboard: React.FC = () => {
       {inputError && <Error>{inputError}</Error>}
 
       <Repositories>
+        {repositories.length === 0 ? null : (
+          <button type="submit" onClick={handleRemoveRepos}>
+            Limpar repositórios
+          </button>
+        )}
+
         {repositories.map((repository) => (
           <Link
             key={repository.full_name}
-            to={`repositories/${repository.full_name}`}
+            to={`GithubExplorer/repositories/${repository.full_name}`}
           >
             <img
               src={repository.owner.avatar_url}
