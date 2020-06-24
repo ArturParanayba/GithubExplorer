@@ -56,7 +56,9 @@ const Dashboard: React.FC = () => {
       setNewRepo('');
       setInputError('');
     } catch (err) {
-      setInputError('Repositório não encontrado');
+      setInputError(
+        'Repositório não encontrado. Digite: autor/nome do reposiório',
+      );
     }
   }
   return (
