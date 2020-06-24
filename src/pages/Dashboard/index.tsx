@@ -61,7 +61,7 @@ const Dashboard: React.FC = () => {
       setInputError('');
     } catch (err) {
       setInputError(
-        'Repositório não encontrado. Digite: autor/nome do reposiório',
+        'Repositório não encontrado. Digite: autor/nome do reposiório. Exemplo: ArturParanayba/GithubExplorer',
       );
     }
   }
