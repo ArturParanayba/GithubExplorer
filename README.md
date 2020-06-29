@@ -18,6 +18,8 @@ Autor: [Artur Paranayba](https://github.com/ArturParanayba)
    + 🖥 Deploy:
         - Github
         
+Para acessar a aplicação, clique [aqui](https://arturparanayba.github.io/GithubExplorer/)
+        
 ## Para rodar esta aplicação em modo de desenvolvimento:
         
 ### 1 - Baixe o clone este repositório
